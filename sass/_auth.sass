@@ -1,0 +1,150 @@
+$authGrad: linear-gradient(254deg, #FFC000 1.55%, #FF8A00 95.8%)
+$authOrange: #FF8A00
+$authYellow: #FFC000
+
+.auth-page
+  font-family: ProximaNova-Regular, Arial, sans-serif
+  min-height: 100vh
+  display: grid
+  place-items: center
+  padding: 48px 16px
+  // мягкий фон с оттенком градиента
+  background: linear-gradient(180deg, rgba(255, 192, 0, 0.10), rgba(255, 138, 0, 0.06))
+
+.auth-card
+  width: 100%
+  max-width: 420px
+  background: #fff
+  border-radius: 18px
+  padding: 26px 24px 22px
+  border: 1px solid rgba(17, 24, 39, 0.08)
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.10)
+  position: relative
+  overflow: hidden
+
+  // тонкая верхняя полоса-акцент
+  &::before
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 6px
+    background: $authGrad
+
+.auth-brand
+  display: inline-flex
+  margin-bottom: 14px
+
+  img
+    height: 34px
+    width: auto
+
+.auth-title
+  font-family: ProximaNova-Black, Arial, sans-serif
+  margin: 0 0 6px
+  font-size: 26px
+  font-weight: 800
+  color: #111827
+
+.auth-subtitle
+  margin: 0 0 18px
+  font-size: 14px
+  line-height: 1.5
+  color: rgba(17, 24, 39, 0.72)
+
+.auth-form
+  display: flex
+  flex-direction: column
+  gap: 12px
+
+.auth-label
+  font-family: ProximaNova-Semibold, Arial, sans-serif
+  display: flex
+  flex-direction: column
+  gap: 6px
+  font-size: 13px
+  font-weight: 700
+  color: #111827
+
+.auth-input
+  height: 44px
+  border-radius: 12px
+  border: 1px solid rgba(17, 24, 39, 0.14)
+  padding: 0 14px
+  font-size: 14px
+  outline: none
+  background: #fff
+  transition: box-shadow .2s ease, border-color .2s ease
+
+  &:focus
+    border-color: rgba(255, 138, 0, 0.65)
+    box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.18)
+
+.auth-row
+  display: flex
+  justify-content: space-between
+  align-items: center
+  gap: 12px
+  margin-top: 2px
+
+.auth-check
+  display: inline-flex
+  align-items: center
+  gap: 10px
+  font-size: 13px
+  font-weight: 600
+  color: rgba(17, 24, 39, 0.75)
+
+  input
+    width: 16px
+    height: 16px
+    accent-color: $authOrange
+
+.auth-check--stack
+  align-items: flex-start
+
+.auth-link
+  color: $authOrange
+  text-decoration: none
+  font-weight: 800
+
+  &:hover
+    text-decoration: underline
+
+.auth-btn
+  font-family: ProximaNova-Bold, Arial, sans-serif
+  height: 44px
+  border: none
+  border-radius: 12px
+  cursor: pointer
+  font-weight: 900
+  font-size: 14px
+  color: #1a1a1a
+  background: $authGrad
+  transition: transform 0.08s ease, filter 0.2s ease, opacity .2s ease
+  margin-top: 6px
+
+  &:hover
+    filter: saturate(1.05)
+    opacity: 0.96
+
+  &:active
+    transform: translateY(1px)
+
+.auth-bottom
+  margin: 6px 0 0
+  font-size: 13px
+  color: rgba(17, 24, 39, 0.75)
+
+.auth-grid
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 10px
+
+@media (max-width: 420px)
+  .auth-card
+    padding: 22px 18px 18px
+
+  .auth-grid
+    grid-template-columns: 1fr

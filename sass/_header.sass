@@ -1,0 +1,72 @@
+.header 
+    font-family: Roboto, sans-serif
+    padding: 0 91px 0 81px
+    height: 115px
+    line-height: 115px
+    .header__inner
+        display: flex
+        justify-content: space-between
+.header__inner-content
+    display: flex
+    align-items: center
+    .header__inner-content-btns
+        display: flex
+        gap: 10px
+        margin-left: 24px
+        button
+            font-size: 14px
+            font-weight: 700
+            color: #fff
+            width: 160px
+            height: 56px
+            line-height: 56px
+            border-radius: 100px
+            background: linear-gradient(254deg, #FFC000 1.55%, #FF8A00 95.8%)
+            box-shadow: 0px 12px 35px 0px rgba(160, 121, 0, 0.20)
+
+.header__nav
+    display: flex
+    gap: 45px
+    img
+        vertical-align: middle
+    .header__nav-link
+        font-family: Roboto, sans-serif
+        font-size: 15px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        background-clip: text
+        &:first-child
+            font-weight: 700
+    li
+        a
+            position: relative
+            background: linear-gradient(254deg, #FFC000 1.55%, #FF8A00 95.8%)
+            background-clip: text
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            &:hover
+                &::after
+                    content: " "
+                    position: absolute
+                    top: 20px
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    width: 22px
+                    height: 3px
+                    border-radius: 3px
+                    background: linear-gradient(254deg, #FFC000 1.55%, #FF8A00 95.8%)
+    .num
+        position: relative
+        font-size: 5px
+        text-align: center
+        line-height: 13.538px
+        color: white
+        &::after
+            background: linear-gradient(254deg, #FFC000 1.55%, #FF8A00 95.8%)
+            bottom: 20px
+            position: absolute
+            content: "12"
+            border-radius: 50%
+            width: 13.538px
+            height: 13.538px

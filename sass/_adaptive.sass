@@ -1,0 +1,360 @@
+@include media-sm
+    .header
+        height: fit-content
+    .header__inner
+        flex-wrap: wrap
+        height: 100%
+    .header__logo
+        margin: 0 auto
+    .header__inner-content
+        margin: 0 auto
+        flex-direction: column
+        justify-content: center
+    .header__nav
+        flex-direction: column
+        text-align: center
+        gap: 20px
+    
+    .header__inner-content-btns
+        margin: 10px 0
+        flex-wrap: wrap
+        margin-left: 0 !important
+        justify-content: center
+
+    .promo
+        padding: 120px 0 0 50px
+    .promo__title
+        font-size: 20px
+    .promo__subtitle
+        font-size: 10px
+
+    .form
+        input
+            width: 95% !important
+            padding: 24px 0 34px 10%
+    .form-inner
+        &::after
+            width: 70% !important
+        &::before
+            left: 6.5%
+    .wrapper
+        gap: 70px 0 20px 0
+        grid-template-columns: auto
+        grid-template-rows: auto
+    .link-page
+        grid-template-columns: 1fr !important
+        grid-template-rows: repeat(3, 1fr) !important
+        gap: 0 !important
+    .link-page-info
+        text-align: center
+    .wrapper 
+        height: fit-content
+        .wrapper-content 
+            .link-page 
+                > div:last-child
+                    text-align: center
+    .link-page-pages
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: auto
+        div
+            margin-top: 10px
+            text-align: center
+        img
+            text-align: left
+            text-align: center !important
+            margin: 0 auto !important
+    .cards
+        margin-top: 20px
+        grid-template-columns: 1fr
+        grid-template-rows: auto
+    .pagination
+        margin-top: 20px
+        grid-template-columns: 40px 40px 40px 40px 80px !important
+        grid-template-rows: auto
+        justify-content: center !important
+        .pagination-btn
+            width: 40px !important
+            height: 40px !important
+            line-height: 40px !important
+            &:last-child
+                width: 60px !important
+    .aside
+        height: fit-content
+        justify-content: center
+        .aside__text
+            text-align: center
+    
+    .footer
+        height: fit-content !important
+        margin-top: 30px
+    .footer__inner
+        gap: 30px !important
+        flex-wrap: wrap
+        justify-content: center
+    .footer__col
+        text-align: center
+        margin: 0 !important
+        gap: 10px !important
+        &:last-child
+            margin-bottom: 0 !important
+    .footer__media
+        justify-content: center
+
+    .footer__down
+        padding: 0 !important
+        .footer__down-inner
+            font-size: 8px
+            justify-content: space-around
+            .footer__down-right
+                gap: 10px
+
+@include media-md
+    .header
+        height: fit-content
+    .header__inner
+        flex-direction: column
+        height: 100%
+    .header__logo
+        margin: 0 auto
+    .nav
+        ul
+            display: flex
+            gap: 60px
+            flex-direction: row
+        li
+            height: 100%
+    .header__inner-content
+        gap: 20px
+        margin: 0 auto
+        flex-direction: column
+        justify-content: center
+    .header__nav
+        flex-direction: column
+        text-align: center
+    .header__inner-content-btns
+        margin: 10px 0
+        flex-wrap: wrap
+        margin-left: 0 !important
+        justify-content: center
+
+    .promo__title
+        font-size: 34px
+
+
+    .form
+        input
+            width: 95% !important
+    .form-inner
+        &::after
+            width: 70% !important    
+        &::before
+            left: 5.5%
+    .wrapper
+        gap: 70px 0 20px 0
+        grid-template-columns: auto
+        grid-template-rows: auto
+    .link-page
+        grid-template-columns: 1fr !important
+        grid-template-rows: repeat(3, 1fr) !important
+        gap: 0 !important
+    .link-page-info
+        text-align: center
+    .link-page-column
+            img
+                &:last-child
+                    margin-left: 14px
+    .wrapper 
+        height: fit-content
+        .wrapper-content 
+            .link-page 
+                > div:last-child
+                    text-align: center
+    .link-page-pages
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: auto
+        div
+            margin-top: 10px
+            text-align: center
+    .link-page-column
+        text-align: center
+        img
+            text-align: left
+            text-align: center !important
+            margin: 0 auto !important
+    .cards
+        margin-top: 20px
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: auto
+    .pagination
+        margin-top: 20px
+        grid-template-columns: 40px 40px 40px 40px 80px !important
+        grid-template-rows: auto
+        justify-content: center !important
+        .pagination-btn
+            width: 40px !important
+            height: 40px !important
+            line-height: 40px !important
+            &:last-child
+                width: 60px !important
+    .aside
+        height: fit-content
+        justify-content: center
+        .aside__text
+            text-align: center
+    
+    .footer
+        height: fit-content !important
+        margin-top: 30px
+    .footer__inner
+        gap: 30px !important
+        flex-wrap: wrap
+        justify-content: center
+    .footer__col
+        text-align: center
+        margin: 0 !important
+        gap: 10px !important
+        &:last-child
+            margin-bottom: 0 !important
+    .footer__media
+        justify-content: center
+
+    .footer__down
+        padding: 0 !important
+        .footer__down-inner
+            font-size: 8px
+            justify-content: space-around
+            .footer__down-right
+                gap: 10px
+
+@include media-xl
+    .container
+        margin: 0 auto
+        width: 90%
+    .header
+        margin: 0 auto
+        height: fit-content
+        padding: 0 !important
+    .header__inner
+        height: 100%
+    .header__inner-content-btns
+        margin: 10px 0
+        margin-left: 0 !important
+        flex-wrap: wrap
+        justify-content: end
+        button
+            width: 130px !important
+    .nav
+        margin-right: 20px
+    .header__nav
+        gap: 20px
+        margin-left: 10px
+    .promo
+        padding: 120px 0 0 20px
+    .form
+        input
+            width: 95% !important
+    .form-inner
+        &::after
+            width: 70% !important    
+        &::before
+            left: 5.5%
+    .wrapper
+        gap: 70px 0 20px 0
+        grid-template-columns: auto
+        grid-template-rows: auto
+        gap: 0 !important
+    .link-page-info
+        text-align: center
+    .wrapper 
+        height: fit-content
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: auto
+        justify-content: space-between
+        .wrapper-content
+            margin: 0 auto !important
+    .link-page-pages
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: auto
+        img
+            text-align: left
+            text-align: center !important
+            margin: 0 auto !important
+    .cards
+        margin-top: 20px
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: auto
+        
+        .card
+            width: 240px
+            height: 220px
+    .pagination
+        margin-top: 20px
+        grid-template-columns: 40px 40px 40px 40px 80px !important
+        grid-template-rows: auto
+        .pagination-btn
+            width: 40px !important
+            height: 40px !important
+            line-height: 40px !important
+            &:last-child
+                width: 60px !important
+    .aside
+        text-align: center
+        margin-top: 7px
+        display: grid
+        grid-template-columns: auto
+        grid-template-rows: repeat(13, fr)
+        gap: 23px
+        height: 700px
+    .aside__text
+        color: #5C5C5C
+        font-family: ProximaNova-Regular
+        font-size: 14px
+        font-style: normal
+        line-height: 105.469%
+        &:nth-child(1), &:nth-child(11)
+            font-family: ProximaNova-Bold
+            font-size: 18px
+        &:nth-child(11)
+            margin-bottom: 5px
+        &:nth-child(12)
+            button
+                font-size: 11px
+                text-align: center
+                width: 43px
+                height: 42px
+                border: 1px solid #5C5C5C
+                border-radius: 100px
+        &:last-child
+            button
+                color: #FFFEFC
+                font-family: Roboto, sans-serif
+                font-weight: 700
+                font-size: 14px
+                width: 160px
+                height: 56px
+                border-radius: 100px
+                background: linear-gradient(254deg, #FFC000 1.55%, #FF8A00 95.8%)
+                box-shadow: 0px 12px 35px 0px rgba(160, 121, 0, 0.20)
+    
+    .footer
+        height: fit-content !important
+        margin-top: 30px
+    .footer__inner
+        flex-wrap: wrap
+        justify-content: center
+    .footer__col
+        text-align: center
+        margin: 0 !important
+        gap: 10px !important
+        &:last-child
+            margin-bottom: 0 !important
+    .footer__media
+        justify-content: center
+
+    .footer__down
+        padding: 0 !important
+        .footer__down-inner
+            font-size: 8px
+            justify-content: space-around
+            .footer__down-right
+                gap: 10px

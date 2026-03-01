@@ -1,0 +1,93 @@
+.wrapper
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: auto
+    gap: 70px
+    .wrapper-content
+        max-width: 930px
+        display: grid
+        gap: 47px
+        .link-page
+            font-family: ProximaNova-Regular
+            color: #2F2F2F
+            font-size: 14px
+            width: 100%
+            height: 21px
+            display: grid
+            grid-template-columns: 180px 120px auto
+            grid-template-rows: auto
+            gap: 53px
+            > div
+                &:last-child
+                    text-align: right
+            .link-page-pages
+                display: grid
+                grid-template-columns: repeat(4, 1fr)
+                grid-template-rows: auto
+                > div
+                    &:first-child
+                        margin-right: 10px
+            .link-page-column
+                img
+                    &:last-child
+                        margin-left: 14px
+.cards
+    display: grid
+    justify-items: center
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(5, 1fr)
+    gap: 15px 10px
+    .card
+        font-family: ProximaNova-Black
+        font-size: 14px
+        line-height: 152.344%
+        position: relative
+        width: 300px
+        height: 280px
+        color: white
+        border-radius: 10px
+        .card-img
+            position: absolute
+            background-image: url("https://i.pinimg.com/564x/5a/20/7e/5a207eb1e7e8e0052c6f0fdd5d8ca5d0.jpg")
+            width: 100%
+            height: 100%
+            background-position: center
+            background-repeat: no-repeat
+            background-size: cover
+            border-radius: 10px
+        .free
+            position: absolute
+            right: 0
+            background: linear-gradient(254deg, #FFC000 1.55%, #FF8A00 95.8%)
+            border-top-right-radius: 10px
+            border-bottom-left-radius: 10px
+            text-align: center
+            padding: 7px 14px
+        .card-title
+            position: absolute
+            bottom: 0
+            padding: 13px 18px 30px
+            border-radius: 10px
+            height: 73px
+            width: 100%
+            background: linear-gradient(254deg, #FFC000 1.55%, #FF8A00 95.8%)
+.pagination
+    font-family: ProximaNova-Regular
+    display: grid
+    grid-template-columns: 60px 60px 60px 60px 100px
+    grid-template-rows: auto
+    gap: 10px
+    margin-top: 59px
+    .pagination-btn
+        width: 60px
+        height: 60px
+        line-height: 60px
+        text-align: center
+        border-radius: 100px
+        border: 1px solid #E0E0E0
+        background-color: linear-gradient(254deg, #FFC000 1.55%, #FF8A00 95.8%)
+        &:last-child
+            width: 100px
+        &:hover
+            background: linear-gradient(254deg, #FFC000 1.55%, #FF8A00 95.8%)
+            color: #fff

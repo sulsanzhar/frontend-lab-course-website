@@ -1,0 +1,37 @@
+.aside
+    margin-top: 7px
+    display: grid
+    grid-template-columns: auto
+    grid-template-rows: repeat(13, fr)
+    gap: 23px
+    height: 700px
+    .aside__text
+        color: #5C5C5C
+        font-family: ProximaNova-Regular
+        font-size: 14px
+        font-style: normal
+        line-height: 105.469%
+        &:nth-child(1), &:nth-child(11)
+            font-family: ProximaNova-Bold
+            font-size: 18px
+        &:nth-child(11)
+            margin-bottom: 5px
+        &:nth-child(12)
+            button
+                font-size: 11px
+                text-align: center
+                width: 43px
+                height: 42px
+                border: 1px solid #5C5C5C
+                border-radius: 100px
+        &:last-child
+            button
+                color: #FFFEFC
+                font-family: Roboto, sans-serif
+                font-weight: 700
+                font-size: 14px
+                width: 160px
+                height: 56px
+                border-radius: 100px
+                background: linear-gradient(254deg, #FFC000 1.55%, #FF8A00 95.8%)
+                box-shadow: 0px 12px 35px 0px rgba(160, 121, 0, 0.20)
