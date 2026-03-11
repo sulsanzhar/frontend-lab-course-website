@@ -8,53 +8,41 @@
     </head>
 
     <body>
-        <header class="header">
+        <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+        <header class="header header--main">
             <div class="container">
                 <div class="header__inner">
-                    <a href="#" class="header__logo">
+                    <a href="./index.html" class="header__logo">
                         <img src="./img/logo.png" alt="logo" />
                     </a>
-                    <div class="header__inner-content">
-                        <nav class="nav">
-                            <ul class="header__nav">
-                                <li class="header__nav-link">
-                                    <a target="_blank" href="./Home.html"
-                                        >Home</a
-                                    >
-                                </li>
-                                <li class="header__nav-link">
-                                    <a target="_blank" href="./Courses.html"
-                                        >Courses</a
-                                    >
-                                </li>
-                                <li class="header__nav-link">
-                                    <a target="_blank" href="./Blog.html"
-                                        >Blog</a
-                                    >
-                                </li>
-                                <li class="header__nav-link">
-                                    <a target="_blank" href="./AboutUs.html"
-                                        >About Us</a
-                                    >
-                                </li>
-                                <li class="header__nav-link">
-                                    <a target="_blank" href="./ContactUs.html"
-                                        >Contact Us</a
-                                    >
-                                </li>
-                                <li class="header__nav-link num">
-                                    <a target="_blank" href="#"
-                                        ><img
-                                            src="./img/basket.png"
-                                            alt="basket"
-                                    /></a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="header__inner-content-btns">
-                            <button>Be A Contributor</button>
-                            <a class="btn" href="./Login.html">Log in</a>
-                        </div>
+                    <nav class="header__nav-center">
+                        <ul class="header__nav">
+                            <li class="header__nav-link">
+                                <a href="./Home.html">Home</a>
+                            </li>
+                            <li class="header__nav-link">
+                                <a href="./Courses.html">Courses</a>
+                            </li>
+                            <li class="header__nav-link">
+                                <a href="./Blog.html">Blog</a>
+                            </li>
+                            <li class="header__nav-link">
+                                <a href="./AboutUs.html">About Us</a>
+                            </li>
+                            <li class="header__nav-link">
+                                <a href="./ContactUs.html">Contact Us</a>
+                            </li>
+                            <li class="header__nav-link">
+                                <a href="./BlackFriday.html">Black Friday</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__inner-right">
+                        <a href="./Cart.html" class="header__cart-link">
+                            <img src="./img/basket.png" alt="Корзина" />
+                            <span class="cart-count" id="headerCartCount">0</span>
+                        </a>
+                        <a class="header__btn header__btn--login" href="./Login.html">Log in</a>
                     </div>
                 </div>
             </div>
@@ -102,186 +90,274 @@
                     <div class="wrapper-content">
                         <div class="link-page">
                             <div class="link-page-info">
-                                Showing 1–8 of 10 results
-                            </div>
-                            <div class="link-page-pages">
-                                <div>Show</div>
-                                <div>6</div>
-                                <div>12</div>
-                                <div>16</div>
-                            </div>
-                            <div class="link-page-column">
-                                <a href="#"
-                                    ><img
-                                        src="./img/bullet-list-row.png"
-                                        alt="list"
-                                /></a>
-                                <a href="#"
-                                    ><img
-                                        src="./img/grid-interface-col.png"
-                                        alt="list"
-                                /></a>
+                                <span id="indexResultsInfo">Показано <span id="indexResultsFrom">1</span>–<span id="indexResultsTo">6</span> из <span id="indexResultsCount">30</span></span>
                             </div>
                         </div>
 
-                        <div class="cards">
-                            <div class="card">
+                        <div class="cards" id="indexCardsContainer">
+                            <div class="card" data-id="course-1" data-title="Become A Social Media Expert" data-price="0" data-type="Free" data-category="Digital Marketing" data-in-stock="1" data-discount="0">
                                 <div class="card-img"></div>
                                 <div class="free">Free</div>
-                                <div class="card-title">
-                                    Become A Social <br />
-                                    Media Expert
-                                </div>
+                                <div class="card-footer"><div class="card-title">Become A Social <br />Media Expert</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-1">Add to cart</button>
                             </div>
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-2" data-title="Advance Your 3d Modelling Skill" data-price="49" data-type="Premium" data-category="3D Artist" data-in-stock="1" data-discount="30">
                                 <div class="card-img"></div>
                                 <div class="free">Premium</div>
-                                <div class="card-title">
-                                    Advance Your <br />
-                                    3d Modelling Skill
-                                </div>
+                                <div class="card-footer"><div class="card-title">Advance Your <br />3d Modelling Skill</div>
+                                <div class="card-price">$49</div>
+                                <button type="button" class="card-add-btn" data-id="course-2">Add to cart</button>
                             </div>
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-3" data-title="The Art Of Growing Relationship" data-price="0" data-type="Free" data-category="Design" data-in-stock="1" data-discount="0">
                                 <div class="card-img"></div>
                                 <div class="free">Free</div>
-                                <div class="card-title">
-                                    The Art Of Growing <br />
-                                    Relationship
-                                </div>
+                                <div class="card-footer"><div class="card-title">The Art Of Growing <br />Relationship</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-3">Add to cart</button>
                             </div>
-
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-4" data-title="Skills Needed In Becoming A Designer" data-price="59" data-type="Premium" data-category="Design" data-in-stock="0" data-discount="25">
                                 <div class="card-img"></div>
                                 <div class="free">Premium</div>
-                                <div class="card-title">
-                                    Skills Needed In <br />
-                                    Becoming A Designer
-                                </div>
+                                <div class="card-footer"><div class="card-title">Skills Needed In <br />Becoming A Designer</div>
+                                <div class="card-price">$59</div>
+                                <button type="button" class="card-add-btn" data-id="course-4">Add to cart</button>
                             </div>
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-5" data-title="Learn Logo Design" data-price="39" data-type="Premium" data-category="Design" data-in-stock="1" data-discount="20">
                                 <div class="card-img"></div>
                                 <div class="free">Premium</div>
-                                <div class="card-title">Learn Logo Design</div>
+                                <div class="card-footer"><div class="card-title">Learn Logo Design</div>
+                                <div class="card-price">$39</div>
+                                <button type="button" class="card-add-btn" data-id="course-5">Add to cart</button>
                             </div>
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-6" data-title="Become A Web Developer" data-price="0" data-type="Free" data-category="Web Development" data-in-stock="1" data-discount="0">
                                 <div class="card-img"></div>
                                 <div class="free">Free</div>
-                                <div class="card-title">
-                                    Become A Web Developer
-                                </div>
+                                <div class="card-footer"><div class="card-title">Become A Web Developer</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-6">Add to cart</button>
                             </div>
-
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-7" data-title="Embark On The Journey Of Becoming An Artist" data-price="69" data-type="Premium" data-category="Design" data-in-stock="1" data-discount="45">
                                 <div class="card-img"></div>
                                 <div class="free">Premium</div>
-                                <div class="card-title">
-                                    Embark On The Journey <br />
-                                    Of Becoming An Artist
-                                </div>
+                                <div class="card-footer"><div class="card-title">Embark On The Journey <br />Of Becoming An Artist</div>
+                                <div class="card-price">$69</div>
+                                <button type="button" class="card-add-btn" data-id="course-7">Add to cart</button>
                             </div>
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-8" data-title="4 Weeks Photography Bootcamp" data-price="0" data-type="Free" data-category="Photography" data-in-stock="1" data-discount="0">
                                 <div class="card-img"></div>
                                 <div class="free">Free</div>
-                                <div class="card-title">
-                                    4 Weeks Photography <br />
-                                    Bootcamp
-                                </div>
+                                <div class="card-footer"><div class="card-title">4 Weeks Photography <br />Bootcamp</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-8">Add to cart</button>
                             </div>
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-9" data-title="Learn Organization Management" data-price="49" data-type="Premium" data-category="Digital Marketing" data-in-stock="0" data-discount="15">
                                 <div class="card-img"></div>
                                 <div class="free">Premium</div>
-                                <div class="card-title">
-                                    Learn Organization <br />
-                                    Management
-                                </div>
+                                <div class="card-footer"><div class="card-title">Learn Organization <br />Management</div>
+                                <div class="card-price">$49</div>
+                                <button type="button" class="card-add-btn" data-id="course-9">Add to cart</button>
                             </div>
-
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-10" data-title="3 in 1 Course Of Becoming A Makeup Artist" data-price="0" data-type="Free" data-category="Design" data-in-stock="1" data-discount="0">
                                 <div class="card-img"></div>
                                 <div class="free">Free</div>
-                                <div class="card-title">
-                                    3 in 1 Course Of Becoming <br />
-                                    A Makeup Artist
-                                </div>
+                                <div class="card-footer"><div class="card-title">3 in 1 Course Of Becoming <br />A Makeup Artist</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-10">Add to cart</button>
                             </div>
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-11" data-title="How To Have A Good Listening Ear For Music" data-price="29" data-type="Premium" data-category="Sound & Music" data-in-stock="1" data-discount="50">
                                 <div class="card-img"></div>
                                 <div class="free">Premium</div>
-                                <div class="card-title">
-                                    How To Have A Good <br />
-                                    Listening Ear For Music
-                                </div>
+                                <div class="card-footer"><div class="card-title">How To Have A Good <br />Listening Ear For Music</div>
+                                <div class="card-price">$29</div>
+                                <button type="button" class="card-add-btn" data-id="course-11">Add to cart</button>
                             </div>
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-12" data-title="Become A Social Media Expert" data-price="0" data-type="Free" data-category="Digital Marketing" data-in-stock="1" data-discount="0">
                                 <div class="card-img"></div>
                                 <div class="free">Free</div>
-                                <div class="card-title">
-                                    Become A Social <br />
-                                    Media Expert
-                                </div>
+                                <div class="card-footer"><div class="card-title">Become A Social <br />Media Expert</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-12">Add to cart</button>
                             </div>
-
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-13" data-title="Become A Web Developer" data-price="0" data-type="Free" data-category="Web Development" data-in-stock="1" data-discount="0">
                                 <div class="card-img"></div>
                                 <div class="free">Free</div>
-                                <div class="card-title">
-                                    Become A Web Developer
-                                </div>
+                                <div class="card-footer"><div class="card-title">Become A Web Developer</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-13">Add to cart</button>
                             </div>
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-14" data-title="Advance Your 3d Modelling Skill" data-price="49" data-type="Premium" data-category="3D Artist" data-in-stock="1" data-discount="0">
                                 <div class="card-img"></div>
                                 <div class="free">Premium</div>
-                                <div class="card-title">
-                                    Advance Your <br />
-                                    3d Modelling Skill
-                                </div>
+                                <div class="card-footer"><div class="card-title">Advance Your <br />3d Modelling Skill</div>
+                                <div class="card-price">$49</div>
+                                <button type="button" class="card-add-btn" data-id="course-14">Add to cart</button>
                             </div>
-                            <div class="card">
+                            </div>
+                            <div class="card" data-id="course-15" data-title="The Art Of Growing Relationship" data-price="0" data-type="Free" data-category="Design" data-in-stock="1" data-discount="0">
                                 <div class="card-img"></div>
                                 <div class="free">Free</div>
-                                <div class="card-title">
-                                    The Art Of Growing <br />
-                                    Relationship
-                                </div>
+                                <div class="card-footer"><div class="card-title">The Art Of Growing <br />Relationship</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-15">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-16" data-title="React & Node Full Stack" data-price="79" data-type="Premium" data-category="Web Development" data-in-stock="1" data-discount="20">
+                                <div class="card-img"></div>
+                                <div class="free">Premium</div>
+                                <div class="card-footer"><div class="card-title">React & Node <br />Full Stack</div>
+                                <div class="card-price">$79</div>
+                                <button type="button" class="card-add-btn" data-id="course-16">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-17" data-title="UI/UX Design Fundamentals" data-price="0" data-type="Free" data-category="Design" data-in-stock="1" data-discount="0">
+                                <div class="card-img"></div>
+                                <div class="free">Free</div>
+                                <div class="card-footer"><div class="card-title">UI/UX Design <br />Fundamentals</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-17">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-18" data-title="Portrait Photography Masterclass" data-price="55" data-type="Premium" data-category="Photography" data-in-stock="1" data-discount="25">
+                                <div class="card-img"></div>
+                                <div class="free">Premium</div>
+                                <div class="card-footer"><div class="card-title">Portrait Photography <br />Masterclass</div>
+                                <div class="card-price">$55</div>
+                                <button type="button" class="card-add-btn" data-id="course-18">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-19" data-title="Blender 3D for Beginners" data-price="0" data-type="Free" data-category="3D Artist" data-in-stock="1" data-discount="0">
+                                <div class="card-img"></div>
+                                <div class="free">Free</div>
+                                <div class="card-footer"><div class="card-title">Blender 3D <br />for Beginners</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-19">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-20" data-title="After Effects Motion Design" data-price="65" data-type="Premium" data-category="Motion Graphics" data-in-stock="0" data-discount="30">
+                                <div class="card-img"></div>
+                                <div class="free">Premium</div>
+                                <div class="card-footer"><div class="card-title">After Effects <br />Motion Design</div>
+                                <div class="card-price">$65</div>
+                                <button type="button" class="card-add-btn" data-id="course-20">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-21" data-title="Music Production Basics" data-price="0" data-type="Free" data-category="Sound & Music" data-in-stock="1" data-discount="0">
+                                <div class="card-img"></div>
+                                <div class="free">Free</div>
+                                <div class="card-footer"><div class="card-title">Music Production <br />Basics</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-21">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-22" data-title="SEO & Content Marketing" data-price="45" data-type="Premium" data-category="Digital Marketing" data-in-stock="1" data-discount="15">
+                                <div class="card-img"></div>
+                                <div class="free">Premium</div>
+                                <div class="card-footer"><div class="card-title">SEO & Content <br />Marketing</div>
+                                <div class="card-price">$45</div>
+                                <button type="button" class="card-add-btn" data-id="course-22">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-23" data-title="Python for Data Science" data-price="69" data-type="Premium" data-category="Web Development" data-in-stock="1" data-discount="40">
+                                <div class="card-img"></div>
+                                <div class="free">Premium</div>
+                                <div class="card-footer"><div class="card-title">Python for <br />Data Science</div>
+                                <div class="card-price">$69</div>
+                                <button type="button" class="card-add-btn" data-id="course-23">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-24" data-title="Figma from Zero to Hero" data-price="0" data-type="Free" data-category="Design" data-in-stock="1" data-discount="0">
+                                <div class="card-img"></div>
+                                <div class="free">Free</div>
+                                <div class="card-footer"><div class="card-title">Figma from Zero <br />to Hero</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-24">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-25" data-title="Landscape Photography" data-price="49" data-type="Premium" data-category="Photography" data-in-stock="1" data-discount="20">
+                                <div class="card-img"></div>
+                                <div class="free">Premium</div>
+                                <div class="card-footer"><div class="card-title">Landscape <br />Photography</div>
+                                <div class="card-price">$49</div>
+                                <button type="button" class="card-add-btn" data-id="course-25">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-26" data-title="Character Modeling in Maya" data-price="89" data-type="Premium" data-category="3D Artist" data-in-stock="1" data-discount="35">
+                                <div class="card-img"></div>
+                                <div class="free">Premium</div>
+                                <div class="card-footer"><div class="card-title">Character Modeling <br />in Maya</div>
+                                <div class="card-price">$89</div>
+                                <button type="button" class="card-add-btn" data-id="course-26">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-27" data-title="Cinema 4D Basics" data-price="0" data-type="Free" data-category="Motion Graphics" data-in-stock="1" data-discount="0">
+                                <div class="card-img"></div>
+                                <div class="free">Free</div>
+                                <div class="card-footer"><div class="card-title">Cinema 4D <br />Basics</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-27">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-28" data-title="Sound Design for Video" data-price="39" data-type="Premium" data-category="Sound & Music" data-in-stock="0" data-discount="25">
+                                <div class="card-img"></div>
+                                <div class="free">Premium</div>
+                                <div class="card-footer"><div class="card-title">Sound Design <br />for Video</div>
+                                <div class="card-price">$39</div>
+                                <button type="button" class="card-add-btn" data-id="course-28">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-29" data-title="Social Media Marketing" data-price="0" data-type="Free" data-category="Digital Marketing" data-in-stock="1" data-discount="0">
+                                <div class="card-img"></div>
+                                <div class="free">Free</div>
+                                <div class="card-footer"><div class="card-title">Social Media <br />Marketing</div>
+                                <div class="card-price">Free</div>
+                                <button type="button" class="card-add-btn" data-id="course-29">Add to cart</button>
+                            </div>
+                            </div>
+                            <div class="card" data-id="course-30" data-title="JavaScript Advanced" data-price="59" data-type="Premium" data-category="Web Development" data-in-stock="1" data-discount="30">
+                                <div class="card-img"></div>
+                                <div class="free">Premium</div>
+                                <div class="card-footer"><div class="card-title">JavaScript <br />Advanced</div>
+                                <div class="card-price">$59</div>
+                                <button type="button" class="card-add-btn" data-id="course-30">Add to cart</button>
+                            </div>
                             </div>
                         </div>
-                        <div class="pagination">
-                            <button class="pagination-btn">01</button>
-                            <button class="pagination-btn">02</button>
-                            <button class="pagination-btn">03</button>
-                            <button class="pagination-btn">…</button>
-                            <button class="pagination-btn">Next</button>
+                        <div class="pagination" id="indexPagination" role="navigation" aria-label="Пагинация">
+                            <!-- Кнопки страниц подставляются через JS -->
                         </div>
                     </div>
 
-                    <div class="aside">
-                        <div class="aside__text">All Courses</div>
-                        <a href="#" class="aside__text"
-                            >Web Development (2908)</a
-                        >
-                        <a href="#" class="aside__text">Designs (11293)</a>
-                        <a href="#" class="aside__text">Photography (2230)</a>
-                        <a href="#" class="aside__text">3d Artist (9828)</a>
-                        <a href="#" class="aside__text"
-                            >Motion Graphics (8223)</a
-                        >
-                        <a href="#" class="aside__text"
-                            >Software Engineer (1001)</a
-                        >
-                        <a href="#" class="aside__text">UI/ UX RoadMap (734)</a>
-                        <a href="#" class="aside__text">Sound & Music (1223)</a>
-                        <a href="#" class="aside__text"
-                            >Digital Marketing (382)</a
-                        >
-                        <div class="aside__text">Course Type</div>
+                    <aside class="aside blackfriday-aside">
+                        <div class="aside__text blackfriday-aside-title">Фильтры</div>
                         <div class="aside__text">
-                            <button>Paid</button>
-                            <button>Free</button>
+                            <label class="blackfriday-label">Категория</label>
+                            <select class="blackfriday-select" id="indexFilterCategory">
+                                <option value="">Все категории</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Design">Design</option>
+                                <option value="Photography">Photography</option>
+                                <option value="3D Artist">3D Artist</option>
+                                <option value="Motion Graphics">Motion Graphics</option>
+                                <option value="Sound & Music">Sound & Music</option>
+                                <option value="Digital Marketing">Digital Marketing</option>
+                            </select>
                         </div>
-                        <div class="aside__text">
-                            <button>Filter</button>
-                        </div>
-                    </div>
+                        <button type="button" class="blackfriday-reset-btn" id="indexFilterReset">Сбросить фильтры</button>
+                    </aside>
                 </div>
             </div>
         </main>
@@ -358,5 +434,7 @@
                 </div>
             </div>
         </div>
+        <script src="./scripts/cart.js"></script>
+        <script src="./scripts/index-filters.js"></script>
     </body>
 </html>

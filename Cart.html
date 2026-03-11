@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Корзина — Semaj Africa</title>
+  </head>
+  <body>
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="./index.html" class="header__logo">
+            <img src="./img/logo.png" alt="Semaj Africa" />
+          </a>
+          <nav class="header__nav-center">
+            <ul class="header__nav">
+              <li class="header__nav-link">
+                <a href="./index.html">Курсы</a>
+              </li>
+              <li class="header__nav-link">
+                <a href="./BlackFriday.html">Black Friday</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__inner-right">
+            <a href="./Cart.html" class="header__cart-link">
+              <img src="./img/basket.png" alt="Корзина" />
+              <span class="cart-count" id="headerCartCount">0</span>
+            </a>
+            <a class="header__btn header__btn--login" href="./Login.html">Log in</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="cart-main">
+      <div class="container">
+        <h1 class="cart-title">Корзина</h1>
+
+        <div class="cart-content" id="cartContent">
+          <div class="cart-list" id="cartList">
+            <!-- Курсы из корзины подставляются через JS -->
+          </div>
+          <aside class="cart-summary" id="cartSummary">
+            <div class="cart-summary__inner">
+              <h2 class="cart-summary__title">Итого</h2>
+              <p class="cart-summary__total">
+                <span class="cart-summary__label">Сумма:</span>
+                <span class="cart-summary__value" id="cartTotalPrice">$0</span>
+              </p>
+              <a href="./Checkout.html" class="cart-summary__btn">Оформить заказ</a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="cart-empty" id="cartEmpty">
+          <div class="cart-empty__icon" aria-hidden="true">🛒</div>
+          <p class="cart-empty__text">В корзине пока ничего нет</p>
+          <p class="cart-empty__hint">Добавьте курсы с главной страницы или Black Friday</p>
+          <a href="./index.html" class="cart-empty__link">Перейти к курсам</a>
+        </div>
+      </div>
+    </main>
+
+    <script src="./scripts/cart.js"></script>
+    <script>
+      (function () {
+        var CART_KEY = "courseCart";
+        function getCart() {
+          try {
+            return JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+          } catch (e) {
+            return [];
+          }
+        }
+        var list = document.getElementById("cartList");
+        var empty = document.getElementById("cartEmpty");
+        var content = document.getElementById("cartContent");
+        var summary = document.getElementById("cartSummary");
+        var totalEl = document.getElementById("cartTotalPrice");
+
+        function render() {
+          var cart = getCart();
+          if (window.SemajCart && window.SemajCart.updateCartCount) window.SemajCart.updateCartCount();
+
+          if (cart.length === 0) {
+            if (content) content.style.display = "none";
+            if (empty) empty.style.display = "block";
+            return;
+          }
+
+          if (content) content.style.display = "flex";
+          if (empty) empty.style.display = "none";
+
+          list.innerHTML = "";
+          var total = 0;
+          cart.forEach(function (item) {
+            total += item.price || 0;
+            var card = document.createElement("div");
+            card.className = "cart-item";
+            card.innerHTML =
+              '<div class="cart-item__img" style="background-image: url(https://i.pinimg.com/564x/5a/20/7e/5a207eb1e7e8e0052c6f0fdd5d8ca5d0.jpg);"></div>' +
+              '<div class="cart-item__body">' +
+              '<h3 class="cart-item__title">' + (item.title || "") + "</h3>" +
+              '<p class="cart-item__price">' + (item.price === 0 ? "Бесплатно" : "$" + item.price) + "</p>" +
+              "</div>" +
+              '<button type="button" class="cart-item__remove" data-id="' + item.id + '" aria-label="Удалить из корзины">×</button>';
+            list.appendChild(card);
+          });
+          if (totalEl) totalEl.textContent = "$" + total;
+
+          list.querySelectorAll(".cart-item__remove").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              var id = btn.getAttribute("data-id");
+              var cart = getCart().filter(function (item) { return item.id !== id; });
+              localStorage.setItem(CART_KEY, JSON.stringify(cart));
+              render();
+            });
+          });
+        }
+        render();
+      })();
+    </script>
+  </body>
+</html>

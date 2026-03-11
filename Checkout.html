@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Оформление заказа</title>
+  </head>
+  <body>
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a href="./index.html" class="header__logo">
+            <img src="./img/logo.png" alt="Semaj Africa" />
+          </a>
+          <nav class="header__nav-center">
+            <ul class="header__nav">
+              <li class="header__nav-link">
+                <a href="./index.html">Курсы</a>
+              </li>
+              <li class="header__nav-link">
+                <a href="./BlackFriday.html">Black Friday</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__inner-right">
+            <a href="./Cart.html" class="header__cart-link">
+              <img src="./img/basket.png" alt="Корзина" />
+              <span class="cart-count" id="headerCartCount">0</span>
+            </a>
+            <a class="header__btn header__btn--login" href="./Login.html">Log in</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="checkout-main">
+      <div class="container">
+        <h1 class="checkout-title">Оформление заказа</h1>
+
+        <div
+          class="checkout-success"
+          id="checkoutSuccess"
+          style="display: none"
+        >
+          <p class="checkout-success-text">Заказ успешно оформлен!</p>
+          <a href="./index.html" class="checkout-success-link"
+            >Вернуться на главную</a
+          >
+        </div>
+
+        <form class="checkout-form" id="checkoutForm" novalidate>
+          <div class="checkout-form__field">
+            <label class="checkout-form__label" for="fullName"
+              >Имя и фамилия</label
+            >
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              class="checkout-form__input"
+              placeholder="Введите имя и фамилию"
+              autocomplete="name"
+            />
+            <span
+              class="checkout-form__error"
+              id="errorFullName"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <div class="checkout-form__field">
+            <label class="checkout-form__label" for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="checkout-form__input"
+              placeholder="example@mail.com"
+              autocomplete="email"
+            />
+            <span
+              class="checkout-form__error"
+              id="errorEmail"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <div class="checkout-form__field">
+            <label class="checkout-form__label" for="phone"
+              >Номер телефона</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="checkout-form__input"
+              placeholder="+7 (999) 123-45-67"
+              autocomplete="tel"
+            />
+            <span
+              class="checkout-form__error"
+              id="errorPhone"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <div class="checkout-form__field">
+            <label class="checkout-form__label" for="address"
+              >Адрес доставки</label
+            >
+            <input
+              type="text"
+              id="address"
+              name="address"
+              class="checkout-form__input"
+              placeholder="Город, улица, дом, квартира"
+              autocomplete="street-address"
+            />
+            <span
+              class="checkout-form__error"
+              id="errorAddress"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <div class="checkout-form__field">
+            <span class="checkout-form__label">Способ оплаты</span>
+            <div class="checkout-form__radio-group">
+              <label class="checkout-form__radio-label">
+                <input
+                  type="radio"
+                  name="payment"
+                  value="cash"
+                  class="checkout-form__radio"
+                />
+                Наличные
+              </label>
+              <label class="checkout-form__radio-label">
+                <input
+                  type="radio"
+                  name="payment"
+                  value="card"
+                  class="checkout-form__radio"
+                />
+                Карта
+              </label>
+            </div>
+            <span
+              class="checkout-form__error"
+              id="errorPayment"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <button type="submit" class="checkout-form__submit">
+            Подтвердить заказ / Confirm Order
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <script src="./scripts/cart.js"></script>
+    <script src="./scripts/checkout.js"></script>
+  </body>
+</html>
