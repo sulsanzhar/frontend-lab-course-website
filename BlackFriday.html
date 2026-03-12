@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
           <nav class="header__nav-center">
             <ul class="header__nav">
               <li class="header__nav-link">
-                <a href="./index.html">Курсы</a>
+                <a href="./index.html">Courses</a>
               </li>
               <li class="header__nav-link">
                 <a href="./BlackFriday.html">Black Friday</a>
@@ -26,7 +26,7 @@
           </nav>
           <div class="header__inner-right">
             <a href="./Cart.html" class="header__cart-link">
-              <img src="./img/basket.png" alt="Корзина" />
+              <img src="./img/basket.png" alt="Cart" />
               <span class="cart-count" id="headerCartCount">0</span>
             </a>
             <a class="header__btn header__btn--login" href="./Login.html">Log in</a>
@@ -42,24 +42,24 @@
           <div class="blackfriday-banner__inner">
             <h1 class="blackfriday-banner__title">Black Friday</h1>
             <p class="blackfriday-banner__subtitle">
-              Скидки на курсы
+              Course discounts
             </p>
             <div class="countdown" id="countdown" aria-live="polite">
               <div class="countdown__item">
                 <span class="countdown__value" id="countdown-days">00</span>
-                <span class="countdown__label">дней</span>
+                <span class="countdown__label">days</span>
               </div>
               <div class="countdown__item">
                 <span class="countdown__value" id="countdown-hours">00</span>
-                <span class="countdown__label">часов</span>
+                <span class="countdown__label">hours</span>
               </div>
               <div class="countdown__item">
                 <span class="countdown__value" id="countdown-minutes">00</span>
-                <span class="countdown__label">минут</span>
+                <span class="countdown__label">min</span>
               </div>
               <div class="countdown__item">
                 <span class="countdown__value" id="countdown-seconds">00</span>
-                <span class="countdown__label">секунд</span>
+                <span class="countdown__label">sec</span>
               </div>
             </div>
           </div>
@@ -71,29 +71,29 @@
           <div class="wrapper-content">
             <div class="blackfriday-filters-row">
               <p class="blackfriday-results" id="resultsInfo">
-                Показано <span id="bfResultsFrom">0</span>–<span id="bfResultsTo">0</span> из <span id="bfResultsCount">0</span>
+                Showing <span id="bfResultsFrom">0</span>–<span id="bfResultsTo">0</span> of <span id="bfResultsCount">0</span>
               </p>
             </div>
             <div class="cards" id="productsContainer">
             </div>
-            <div class="pagination" id="bfPagination" role="navigation" aria-label="Пагинация">
+            <div class="pagination" id="bfPagination" role="navigation" aria-label="Pagination">
             </div>
             <div
               class="blackfriday-empty"
               id="productsEmpty"
               style="display: none"
             >
-              <p class="blackfriday-empty__text">По выбранным фильтрам товаров не найдено.</p>
-              <p class="blackfriday-empty__hint">Попробуйте изменить категорию или сбросить фильтры.</p>
+              <p class="blackfriday-empty__text">No products match your filters.</p>
+              <p class="blackfriday-empty__hint">Try changing the category or resetting the filters.</p>
             </div>
           </div>
 
           <aside class="aside blackfriday-aside">
-            <div class="aside__text blackfriday-aside-title">Фильтры</div>
+            <div class="aside__text blackfriday-aside-title">Filters</div>
             <div class="aside__text">
-              <label class="blackfriday-label">Категория</label>
+              <label class="blackfriday-label">Category</label>
               <select class="blackfriday-select" id="filterCategory">
-                <option value="">Все категории</option>
+                <option value="">All categories</option>
                 <option value="Web Development">Web Development</option>
                 <option value="Design">Design</option>
                 <option value="Photography">Photography</option>
@@ -104,11 +104,11 @@
               </select>
             </div>
             <div class="aside__text">
-              <label class="blackfriday-label">Сортировка по скидке</label>
+              <label class="blackfriday-label">Sort by discount</label>
               <select class="blackfriday-select" id="filterSort">
-                <option value="">Без сортировки</option>
-                <option value="discount-desc">Сначала большие скидки</option>
-                <option value="discount-asc">Сначала маленькие скидки</option>
+                <option value="">No sort</option>
+                <option value="discount-desc">Highest discount first</option>
+                <option value="discount-asc">Lowest discount first</option>
               </select>
             </div>
             <button
@@ -116,7 +116,7 @@
               class="blackfriday-reset-btn"
               id="resetFilters"
             >
-              Сбросить фильтры
+              Reset filters
             </button>
           </aside>
         </div>

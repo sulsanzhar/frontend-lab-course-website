@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>Корзина — Semaj Africa</title>
+    <title>Cart — Semaj Africa</title>
   </head>
   <body>
     <div class="toast-container" id="toastContainer" aria-live="polite"></div>
@@ -17,7 +17,7 @@
           <nav class="header__nav-center">
             <ul class="header__nav">
               <li class="header__nav-link">
-                <a href="./index.html">Курсы</a>
+                <a href="./index.html">Courses</a>
               </li>
               <li class="header__nav-link">
                 <a href="./BlackFriday.html">Black Friday</a>
@@ -26,7 +26,7 @@
           </nav>
           <div class="header__inner-right">
             <a href="./Cart.html" class="header__cart-link">
-              <img src="./img/basket.png" alt="Корзина" />
+              <img src="./img/basket.png" alt="Cart" />
               <span class="cart-count" id="headerCartCount">0</span>
             </a>
             <a class="header__btn header__btn--login" href="./Login.html">Log in</a>
@@ -37,28 +37,28 @@
 
     <main class="cart-main">
       <div class="container">
-        <h1 class="cart-title">Корзина</h1>
+        <h1 class="cart-title">Cart</h1>
 
         <div class="cart-content" id="cartContent">
           <div class="cart-list" id="cartList">
           </div>
           <aside class="cart-summary" id="cartSummary">
             <div class="cart-summary__inner">
-              <h2 class="cart-summary__title">Итого</h2>
+              <h2 class="cart-summary__title">Total</h2>
               <p class="cart-summary__total">
-                <span class="cart-summary__label">Сумма:</span>
+                <span class="cart-summary__label">Total:</span>
                 <span class="cart-summary__value" id="cartTotalPrice">$0</span>
               </p>
-              <a href="./Checkout.html" class="cart-summary__btn">Оформить заказ</a>
+              <a href="./Checkout.html" class="cart-summary__btn">Checkout</a>
             </div>
           </aside>
         </div>
 
         <div class="cart-empty" id="cartEmpty">
           <div class="cart-empty__icon" aria-hidden="true">🛒</div>
-          <p class="cart-empty__text">В корзине пока ничего нет</p>
-          <p class="cart-empty__hint">Добавьте курсы с главной страницы или Black Friday</p>
-          <a href="./index.html" class="cart-empty__link">Перейти к курсам</a>
+          <p class="cart-empty__text">Your cart is empty</p>
+          <p class="cart-empty__hint">Add courses from the main page or Black Friday</p>
+          <a href="./index.html" class="cart-empty__link">Go to courses</a>
         </div>
       </div>
     </main>
@@ -103,9 +103,9 @@
               '<div class="cart-item__img" style="background-image: url(https://i.pinimg.com/564x/5a/20/7e/5a207eb1e7e8e0052c6f0fdd5d8ca5d0.jpg);"></div>' +
               '<div class="cart-item__body">' +
               '<h3 class="cart-item__title">' + (item.title || "") + "</h3>" +
-              '<p class="cart-item__price">' + (item.price === 0 ? "Бесплатно" : "$" + item.price) + "</p>" +
+              '<p class="cart-item__price">' + (item.price === 0 ? "Free" : "$" + item.price) + "</p>" +
               "</div>" +
-              '<button type="button" class="cart-item__remove" data-id="' + item.id + '" aria-label="Удалить из корзины">×</button>';
+              '<button type="button" class="cart-item__remove" data-id="' + item.id + '" aria-label="Remove from cart">×</button>';
             list.appendChild(card);
           });
           if (totalEl) totalEl.textContent = "$" + total;

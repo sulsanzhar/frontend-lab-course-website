@@ -87,7 +87,7 @@
       '" data-price="' +
       price +
       '" data-type="Premium">' +
-      '<button type="button" class="card-add-plus" aria-label="Добавить в корзину">+</button>' +
+      '<button type="button" class="card-add-plus" aria-label="Add to cart">+</button>' +
       '<div class="card-img"></div>' +
       '<div class="card-badge">-' + product.discount + '%</div>' +
       '<div class="card-footer">' +
@@ -112,8 +112,8 @@
     var prevBtn = document.createElement('button');
     prevBtn.type = 'button';
     prevBtn.className = 'pagination-btn pagination-prev';
-    prevBtn.textContent = 'Назад';
-    prevBtn.setAttribute('aria-label', 'Предыдущая страница');
+    prevBtn.textContent = 'Back';
+    prevBtn.setAttribute('aria-label', 'Previous page');
     if (currentPage <= 1) prevBtn.disabled = true;
     prevBtn.addEventListener('click', function () {
       if (currentPage > 1) {
@@ -134,7 +134,7 @@
         btn.type = 'button';
         btn.className = 'pagination-btn' + (page === currentPage ? ' pagination-btn--active' : '');
         btn.textContent = String(page);
-        btn.setAttribute('aria-label', 'Страница ' + page);
+        btn.setAttribute('aria-label', 'Page ' + page);
         btn.addEventListener('click', function () {
           currentPage = page;
           applyFilters();
@@ -146,8 +146,8 @@
     var nextBtn = document.createElement('button');
     nextBtn.type = 'button';
     nextBtn.className = 'pagination-btn pagination-next';
-    nextBtn.textContent = 'Далее';
-    nextBtn.setAttribute('aria-label', 'Следующая страница');
+    nextBtn.textContent = 'Next';
+    nextBtn.setAttribute('aria-label', 'Next page');
     if (currentPage >= totalPages) nextBtn.disabled = true;
     nextBtn.addEventListener('click', function () {
       if (currentPage < totalPages) {

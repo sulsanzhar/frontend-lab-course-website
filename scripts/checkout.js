@@ -23,11 +23,11 @@
   };
 
   var requiredMessages = {
-    fullName: "Укажите имя и фамилию",
-    email: "Укажите email",
-    phone: "Укажите номер телефона",
-    address: "Укажите адрес доставки",
-    payment: "Выберите способ оплаты",
+    fullName: "Please enter your full name",
+    email: "Please enter your email",
+    phone: "Please enter your phone number",
+    address: "Please enter your delivery address",
+    payment: "Please select a payment method",
   };
 
   function getPaymentSelected() {

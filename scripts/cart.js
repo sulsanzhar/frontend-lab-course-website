@@ -65,7 +65,7 @@
             var plus = document.createElement('button');
             plus.type = 'button';
             plus.className = 'card-add-plus';
-            plus.setAttribute('aria-label', 'Добавить в корзину');
+            plus.setAttribute('aria-label', 'Add to cart');
             plus.textContent = '+';
             card.insertBefore(plus, card.firstChild);
         });
@@ -76,7 +76,7 @@
         if (cart.some(function(item) { return item.id === id; })) return;
         cart.push({ id: id, title: title, price: parseInt(price, 10) });
         setCart(cart);
-        showToast('Успешно добавлено в корзину');
+        showToast('Added to cart successfully');
         updateCartCount();
         updateCardButtons();
     }
