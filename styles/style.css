@@ -1177,7 +1177,6 @@ input::placeholder {
   }
 }
 
-/* ========== Black Friday page ========== */
 .blackfriday-main {
   min-height: 100vh;
   display: flex;
@@ -1498,7 +1497,6 @@ input::placeholder {
   }
 }
 
-/* ========== Cart page ========== */
 .cart-main {
   min-height: 60vh;
   padding: 48px 0 80px;

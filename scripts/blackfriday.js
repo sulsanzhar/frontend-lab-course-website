@@ -1,7 +1,6 @@
 (function () {
   'use strict';
 
-  // Дата окончания акции: Black Friday 2026, 27 ноября, 23:59:59 (месяц в JS: 0=январь, 10=ноябрь)
   var COUNTDOWN_END = new Date(2026, 10, 27, 23, 59, 59);
 
   var perPage = 6;
