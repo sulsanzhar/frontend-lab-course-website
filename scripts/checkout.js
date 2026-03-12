@@ -1,6 +1,6 @@
 (function () {
   var form = document.getElementById("checkoutForm");
-  var successBlock = document.getElementById("checkoutSuccess");
+  var successModal = document.getElementById("checkoutSuccessModal");
 
   var fields = {
     fullName: {
@@ -103,8 +103,11 @@
   }
 
   function showSuccess() {
-    if (form) form.style.display = "none";
-    if (successBlock) successBlock.style.display = "block";
+    if (successModal) {
+      successModal.classList.add("checkout-success-modal--open");
+      successModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
   }
 
   if (form) {
